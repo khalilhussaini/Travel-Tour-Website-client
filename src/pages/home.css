@@ -1,0 +1,116 @@
+
+
+.home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.home video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homeContent {
+  text-align: center;
+  z-index: 1;
+}
+
+.smallText {
+  font-size: 14px;
+  color: #fff;
+}
+
+.homeTitle {
+  font-size: 36px;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.cardDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.destinationInput,
+.dateInput,
+.priceInput {
+  background-color: #e3cece;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.destinationInput label,
+.dateInput label,
+.priceInput label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+}
+
+.input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.input .icon {
+  font-size: 20px;
+  margin-left: 10px;
+
+}
+
+.priceInput .label_total {
+  margin-bottom: 10px;
+}
+
+.priceInput .total {
+  font-size: 18px;
+  margin-left: 10px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .homeTitle {
+    font-size: 28px;
+  }
+
+  .cardDiv {
+    grid-template-columns: 1fr;
+  }
+
+  .destinationInput,
+  .dateInput,
+  .priceInput {
+    margin-bottom: 20px;
+  }
+}

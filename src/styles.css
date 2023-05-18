@@ -1,0 +1,195 @@
+
+header {
+  background-color: #323fd2;
+  color: #fff;
+  padding: 20px;
+
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 300px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+}
+
+
+.home-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.home-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+.about-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.about-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.contact-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+
+
+.contact{
+
+}
+
+
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #8a0404;
+  color: #8ec10b;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.home-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about-content {
+  font-size: 18px;
+}
+
+.contact-info {
+  font-size: 16px;
+}
+
+.destinations-list {
+  list-style: none;
+}
+
+.not-found-message {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card {
+  width: 18rem;
+}
+
