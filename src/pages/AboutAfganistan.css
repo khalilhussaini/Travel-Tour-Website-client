@@ -1,0 +1,108 @@
+
+ .bg-white {
+    justify-content: center
+  }
+  
+  .rounded {
+    border-radius: 0.25rem;
+    justify-content: center
+  }
+  
+  .shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(134, 18, 18, 0.075) !important;
+  }
+  .content-wrpp:is(:hover, :focus) img { transform: scale(1.1); } 
+  .py-44{
+
+    padding-bottom: 11rem !important;
+    text-align: center;
+    font-size: small;
+    justify-content: center
+ ;
+
+  }
+  
+  .px-4 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    justify-content: center;
+
+  }
+
+  .py-23 {
+ 
+    padding-bottom: 5.75rem !important;
+    justify-content: center
+  }
+  
+  .py-8 {
+
+    padding-bottom: 2rem !important;
+    justify-content: center
+  }
+  .px-5{
+    background-color: rgb(204, 55, 55);
+  }
+
+  @media (max-width: 576px) {
+    .py-44 {
+      padding-bottom: 5rem !important;
+    }
+    
+    .py-23 {
+      padding-top: 3.25rem !important;
+      padding-bottom: 3.25rem !important;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 768px) {
+    .py-44 {
+ 
+      padding-bottom: 7rem !important;
+    }
+    
+    .py-23 {
+
+      padding-bottom: 4rem !important;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 992px) {
+    .py-44 {
+ 
+      padding-bottom: 9rem !important;
+    }
+    
+    .py-23 {
+
+      padding-bottom: 5.5rem !important;
+
+    }
+  }
+  
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .py-44 {
+
+      padding-bottom: 10rem !important;
+    }
+    
+    .py-23 {
+
+      padding-bottom: 6rem !important;
+    }
+  }
+  
+
+  .content-wrpp {
+    width: 100%;
+    position: relative;
+   
+  }
+  
+  .content-wrpp img {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    padding-top: 0%;
+  }
+  

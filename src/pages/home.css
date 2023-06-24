@@ -1,74 +1,82 @@
-
-
-.home {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}
-
-.home video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .homeContent {
   text-align: center;
-  z-index: 1;
+  margin-top: 50px;
+  background-color: #680000;
+  margin-top: -333333px;
 }
 
 .smallText {
-  font-size: 14px;
-  color: #fff;
+  font-size: 18px;
+  color: #888;
+}
+
+.fees {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.grade {
+  margin-right: 40px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+
+.price {
+  margin-left: 100px;
+  margin-right: 40px;
+  font-weight: bold;
+}
+
+.custom-large-text {
+  font-size:50px;
+}
+
+
+.custom-large-text .h1{
+  color: rgb(57, 4, 13);
+}
+.custom-large-tex {
+  font-size: 40px;
 }
 
 .homeTitle {
   font-size: 36px;
-  color: #fff;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 10px;
 }
 
 .cardDiv {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  margin-left: 3px;
-  margin-right: 3px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.row.h1 {
+  font-weight: bold;
+  
 }
 
 .destinationInput,
 .dateInput,
 .priceInput {
-  background-color: #e3cece;
-  padding: 20px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
 
-.destinationInput label,
-.dateInput label,
-.priceInput label {
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
+.label_total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
-  color: #333;
+}
+
+.total {
+  font-size: 18px;
+  color: #888;
 }
 
 .input {
@@ -76,41 +84,127 @@
   align-items: center;
 }
 
+.link-style {
+  color: rgb(37, 0, 0);
+  font-weight: bold;
+}
+
 .input input {
-  flex: 1;
-  padding: 10px;
+  width: 100%;
+  padding: 8px;
   border: none;
-  border-radius: 3px;
+  outline: none;
+  font-size: 16px;
 }
 
-.input .icon {
+.icon {
   font-size: 20px;
-  margin-left: 10px;
-
+  margin-left: 5px;
 }
 
-.priceInput .label_total {
+.custom-caption {
+  text-align: center;
+  margin-bottom: 500px;
+}
+
+.custom-caption-title {
+  color: rgb(116, 0, 0);
+  font-size: 70px;
+}
+
+.custom-caption-text {
+  color: rgb(1, 1, 1);
+  size: 600px;
+}
+
+.Tours {
+  background-color: #f9f7f7;
+  padding: 50px 0;
+}
+
+.titlepage {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titlepage h2 {
+  font-size: 30px;
+  color: #333333;
   margin-bottom: 10px;
 }
 
-.priceInput .total {
+.titlepage span {
   font-size: 18px;
-  margin-left: 10px;
-  color: #333;
+  color: #777777;
 }
 
+.row :is(:hover, :focus) img {
+  transform: scale(1.1);
+}
+
+.owl-carousel .item {
+  text-align: center;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.owl-carousel .item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.owl-carousel .item h3 {
+  font-size: 24px;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+.owl-carousel .item p {
+  font-size: 16px;
+  color: #777777;
+}
+
+.icon {
+  color: #ff6b6b;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.world {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.world h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.card-title h5 {
+  font-weight: bold;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-  .homeTitle {
-    font-size: 28px;
+  .custom-large-text {
+    font-size: 160px;
   }
 
-  .cardDiv {
-    grid-template-columns: 1fr;
+  .custom-large-tex {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-large-text {
+    font-size: 120px;
   }
 
-  .destinationInput,
-  .dateInput,
-  .priceInput {
-    margin-bottom: 20px;
+  .custom-large-tex {
+    font-size: 24px;
   }
 }
