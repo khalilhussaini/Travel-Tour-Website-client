@@ -6,7 +6,7 @@ const Tours = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [tourType, setTourType] = useState("");
-  const [tourProvience, setTourProvience] = useState("");
+  const [tourProvince, setTourProvince] = useState("");
   const [startDate, setStartDate] = useState("");
   const [numberOfPeople, setNumberOfPeople] = useState("");
 
@@ -14,17 +14,34 @@ const Tours = () => {
     e.preventDefault();
     // Process form submission logic here
     console.log("Form submitted!");
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Tour Type:", tourType);
-    console.log("Tour Province:", tourProvience);
-    console.log("Start Date:", startDate);
-    console.log("Number of People:", numberOfPeople);
+
+    //    send data to the server
+    fetch("http://localhost:3005/api/v1/bookings", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        email,
+        tourType,
+        tourProvince,
+        startDate,
+        numberOfPeople,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+
+
     // Reset form fields
     setName("");
     setEmail("");
     setTourType("");
-    setTourProvience("");
+    setTourProvince("");
     setStartDate("");
     setNumberOfPeople("");
   };
@@ -75,8 +92,8 @@ const Tours = () => {
               <Form.Control
                 type="text"
                 placeholder="Enter the tour province"
-                value={tourProvience}
-                onChange={(e) => setTourProvience(e.target.value)}
+                value={tourProvince}
+                onChange={(e) => setTourProvince(e.target.value)}
                 required
               />
             </Form.Group>
