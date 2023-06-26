@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "./Contact.css";
-import { Image } from "react-bootstrap";
 
 const RenderMap = () => {
   return (
@@ -21,15 +20,48 @@ const RenderMap = () => {
 };
 
 const Contact = () => {
-  const handleSubmit = (e) => {
+  const [fullName, setFullName] = useState("");
+  const [emailAddress, setEmailAddress] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleContact = (e) => {
     e.preventDefault();
+    // Process form submission logic here
+    console.log("Form Contact!");
+
+    // send data to the server
+    fetch("http://localhost:3005/api/v1/contacts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        fullName,
+        emailAddress,
+        subject,
+        message,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+
+    // Reset form fields
+    setFullName("");
+    setEmailAddress("");
+    setSubject("");
+    setMessage("");
   };
+
   return (
     <section className="ftco-section">
       <div className="content-wrapper">
         <div className="image-container">
           <img src="https://i.redd.it/vwz7ia5msvp71.jpg" alt="Travel" />
-          <h2 className="heading">Contact with Us </h2>
+          <h2 className="heading">Contact with Us</h2>
         </div>
       </div>
       <Container>
@@ -49,7 +81,7 @@ const Contact = () => {
                 id="contactForm"
                 name="contactForm"
                 className="contactForm"
-                onSubmit={handleSubmit}
+                onSubmit={handleContact}
               >
                 <Row>
                   <Col md={6}>
@@ -60,6 +92,8 @@ const Contact = () => {
                         name="name"
                         id="name"
                         placeholder="Name"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
                       />
                     </Form.Group>
                   </Col>
@@ -71,6 +105,8 @@ const Contact = () => {
                         name="email"
                         id="email"
                         placeholder="Email"
+                        value={emailAddress}
+                        onChange={(e) => setEmailAddress(e.target.value)}
                       />
                     </Form.Group>
                   </Col>
@@ -82,6 +118,8 @@ const Contact = () => {
                         name="subject"
                         id="subject"
                         placeholder="Subject"
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
                       />
                     </Form.Group>
                   </Col>
@@ -95,6 +133,8 @@ const Contact = () => {
                         cols="30"
                         rows="4"
                         placeholder="Message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                       />
                     </Form.Group>
                   </Col>

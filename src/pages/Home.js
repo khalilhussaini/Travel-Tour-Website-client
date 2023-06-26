@@ -57,7 +57,6 @@ function Home() {
           <Carousel.Caption className="custom-caption">
             <h1 className="custom-caption-title custom-large-text">
               Discover Your Favorite place with{" "}
-              <i class="fa fa-usd" aria-hidden="true"></i>
             </h1>
             <p className="custom-caption-text custom-large-text">
               Travel writing is all about your personal experiences
