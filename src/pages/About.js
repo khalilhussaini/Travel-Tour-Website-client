@@ -16,7 +16,6 @@ function About() {
           </div>
         </div>
       </div>
-
       <section className="welcome pt-0 section-margin">
         <Container>
           <Row className="align-items-center">
@@ -85,7 +84,6 @@ function About() {
               </div>
             </Col>
           </Row>
-
           <div className="container py-5">
             <div className="row">
               <div className="col-xl-3 col-sm-6 mb-8">
@@ -130,13 +128,14 @@ function About() {
               </div>
             </div>
           </div>
-
           <Row className="show-grid text-center testimonial-section">
             <div className="testimonial">
               <h1 className="text-center">What People Say about Us</h1>
               <h5 className="text-center">
-                Our clients’ testimonials are the best proof of our high level
-                of service
+                I've been on multiple tours with this agency, and they never
+                disappoint. The staff is professional, and their attention to
+                detail is impressive. From breathtaking landscapes to cultural
+                experiences, every trip has been a delight.
               </h5>
             </div>
             <Col xs={12} sm={4} className="person-wrapper">
@@ -148,12 +147,11 @@ function About() {
               />
               <h3>Mari Johnson</h3>
               <p>
-                “Nina was an excellent Travel Agent for us and considered our
-                unique needs as she planned our itinerary. Every suggestion she
-                made was excellent.”
+                “Travel and Tour Website was an excellent Travel Agent for us
+                and considered our unique needs as she planned our itinerary.
+                Every suggestion she made was excellent.”
               </p>
             </Col>
-
             <Col xs={12} sm={4} className="person-wrapper">
               <img
                 src="https://imgix.ranker.com/list_img_v2/1960/2741960/original/famous-leo-male-celebrities?w=817&h=427&fm=jpg&q=50&fit=crop"
@@ -168,7 +166,6 @@ function About() {
                 without a hitch.”
               </p>
             </Col>
-
             <Col xs={12} sm={4} className="person-wrapper">
               <img
                 src="https://mochamanstyle.com/wp-content/uploads/2014/11/steve_harvey.jpg"
@@ -186,19 +183,18 @@ function About() {
           </Row>
         </Container>
       </section>
-
       <div className="bg-light py-5">
         <div className="container py-5">
           <div className="row mb-4">
             <div className="col-lg-5">
               <h2 className="display-4 font-weight-light">Our team</h2>
               <p className="font-italic text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                We believe that the success of any travel experience lies in the
+                hands of the people behind it.
               </p>
             </div>
           </div>
           <div className="row text-center">
-            {/* Team item */}
             <div className="col-xl-3 col-sm-6 mb-5">
               <div className="bg-white rounded shadow-sm py-13 px-4">
                 <img
@@ -213,9 +209,6 @@ function About() {
                 </span>
               </div>
             </div>
-            {/* End Team item */}
-
-            {/* Team item */}
             <div className="col-xl-3 col-sm-6 mb-5">
               <div className="bg-white rounded shadow-sm py-8 px-4">
                 <img
@@ -230,9 +223,6 @@ function About() {
                 </span>
               </div>
             </div>
-            {/* End Team item */}
-
-            {/* Team item */}
             <div className="col-xl-3 col-sm-6 mb-5">
               <div className="bg-white rounded shadow-sm py-8 px-4">
                 <img
@@ -247,9 +237,6 @@ function About() {
                 </span>
               </div>
             </div>
-            {/* End Team item */}
-
-            {/* Team item */}
             <div className="col-xl-3 col-sm-6 mb-5">
               <div className="bg-white rounded shadow-sm py-8 px-4">
                 <img
@@ -264,7 +251,6 @@ function About() {
                 </span>
               </div>
             </div>
-            {/* End Team item */}
           </div>
         </div>
       </div>

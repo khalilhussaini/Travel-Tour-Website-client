@@ -23,7 +23,6 @@ header {
 
 .title {
   margin-left: 10px;
-  
 }
 
 .logo img {
@@ -35,7 +34,6 @@ header {
 .title {
   font-size: 24px;
   color: #333;
-  
 }
 
 .me-auto {
@@ -52,13 +50,11 @@ header {
 .nav-link:hover {
   color: #c2a3a3;
   text-decoration: underline;
-  
 }
 
 .nav-link.active {
   color: black;
   font-weight: 800;
-
 }
 
 .containerbarr ul {
@@ -79,13 +75,11 @@ header {
   text-decoration: none;
   transition: color 0.3s ease;
   font-weight: bold;
-  
 }
 
 .containerbarr a:hover {
   color: #666;
 }
-
 
 .active {
   font-weight: bold;

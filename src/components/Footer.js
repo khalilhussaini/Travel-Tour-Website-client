@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./footer.css";
 import { FiChevronRight } from "react-icons/fi";
 import {
@@ -9,18 +9,17 @@ import {
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FiSend } from "react-icons/fi";
-/* import video from '../Assets/video.mp4'; */
 import { FaPlane } from "react-icons/fa";
-
 const Footer = () => {
   useEffect(() => {
     Aos.init({ duration: 300 });
   }, []);
+  const [activeLink, setActiveLink] = useState("home"); // Add state to track active link
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
   return (
     <section id="footer" className="footer">
-      {/*             <div className="videoDiv">
-        <video src={video} autoPlay loop muted type="video/mp4" className="fullscreen-video"></video>
-      </div> */}
       <div className="secContent container">
         <div className="contactDiv flex">
           <div data-aos="fade-up" data-aos-duration="2000" className="text">
@@ -50,7 +49,6 @@ const Footer = () => {
               <div className="kab">
                 <FaPlane className="plane-icon" />
               </div>
-
               <h1> Travel and Tour</h1>
             </div>
             <div
@@ -95,19 +93,43 @@ const Footer = () => {
             >
               <span className="groupTitle">OUR AGENCY</span>
 
-              <li className="footerList flex">
+              <li
+                className={`footerList flex ${
+                  activeLink === "home" ? "active" : ""
+                }`}
+                onClick={() => handleLinkClick("home")}
+              >
                 <FiChevronRight className="icon" />
-                Services
+                Home pages
               </li>
 
-              <li className="footerList flex">
+              <li
+                className={`footerList flex ${
+                  activeLink === "about" ? "active" : ""
+                }`}
+                onClick={() => handleLinkClick("about")}
+              >
                 <FiChevronRight className="icon" />
-                Agency
+                About
               </li>
 
-              <li className="footerList flex">
+              <li
+                className={`footerList flex ${
+                  activeLink === "contact" ? "active" : ""
+                }`}
+                onClick={() => handleLinkClick("contact")}
+              >
                 <FiChevronRight className="icon" />
-                Tourism
+                Contact
+              </li>
+              <li
+                className={`footerList flex ${
+                  activeLink === "contact" ? "active" : ""
+                }`}
+                onClick={() => handleLinkClick("contact")}
+              >
+                <FiChevronRight className="icon" />
+                About Afghanistan
               </li>
             </div>
 
@@ -118,9 +140,14 @@ const Footer = () => {
             >
               <span className="groupTitle">PARTNERS</span>
 
-              <li className="footerList flex">
+              <li
+                className={`footerList flex ${
+                  activeLink === "booking" ? "active" : ""
+                }`}
+                onClick={() => handleLinkClick("booking")}
+              >
                 <FiChevronRight className="icon" />
-                Booking
+                Booking/Tours
               </li>
             </div>
           </div>
