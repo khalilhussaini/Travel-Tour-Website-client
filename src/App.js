@@ -1,6 +1,6 @@
 // App.js
 import React from "react";
-import { BrowserRouter , Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./pages/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -27,6 +27,7 @@ const App = () => {
           <Route path="BookingForm" element={<BookingForm />} />
         </Route>
       </Routes>
+
       <Footer />
       <UserContextProvider>
         <Outlet />
