@@ -18,7 +18,7 @@ jobs:
           cache: "npm"
           # Cache the dependencies from last build
           # Save build time if they have not changed
-          cache-dependency-path: client/package-lock.json
+          cache-dependency-path: package-lock.json
       - name: Build App
         # Clean install of NPM packages
         # And build the application
