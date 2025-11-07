@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Travel-Tour-Website-client/static/css/main.997bc08e.css",
-    "main.js": "/Travel-Tour-Website-client/static/js/main.b230a24b.js",
+    "main.js": "/Travel-Tour-Website-client/static/js/main.ba25fc2d.js",
     "index.html": "/Travel-Tour-Website-client/index.html",
     "main.997bc08e.css.map": "/Travel-Tour-Website-client/static/css/main.997bc08e.css.map",
-    "main.b230a24b.js.map": "/Travel-Tour-Website-client/static/js/main.b230a24b.js.map"
+    "main.ba25fc2d.js.map": "/Travel-Tour-Website-client/static/js/main.ba25fc2d.js.map"
   },
   "entrypoints": [
     "static/css/main.997bc08e.css",
-    "static/js/main.b230a24b.js"
+    "static/js/main.ba25fc2d.js"
   ]
 }
