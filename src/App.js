@@ -17,7 +17,6 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <BrowserRouter basename="Travel-Tour-Website-client">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -28,7 +27,6 @@ const App = () => {
           <Route path="BookingForm" element={<BookingForm />} />
         </Route>
       </Routes>
-      </BrowserRouter>
       <Footer />
       <UserContextProvider>
         <Outlet />
