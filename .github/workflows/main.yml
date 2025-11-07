@@ -1,51 +1,31 @@
-name: Deploy GitHub Pages
-
-# Trigger workflow on commits pushed to the main branch
+name: Deploy Static Build to GitHub Pages
+ 
 on:
   push:
     branches: ["main"]
-
+ 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js 24.x
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24.x
-          cache: "npm"
-          # Cache the dependencies from last build
-          # Save build time if they have not changed
-          cache-dependency-path: package-lock.json
-      - name: Build App
-        # Clean install of NPM packages
-        # And build the application
-        run: |
-        
-          npm ci
-          npm run build
-      - name: Upload Artifact
-        id: deployment
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: /build/
-
   deploy:
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-
+      contents: read
+      pages: write
+      id-token: write
+ 
     environment:
       name: github-pages
-      # References the domain at which the GitHub Pages is set for
       url: ${{ steps.deployment.outputs.page_url }}
+ 
     runs-on: ubuntu-latest
-    needs: build
+ 
     steps:
+      - uses: actions/checkout@v4
+ 
+      - name: Upload static files
+        id: upload
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build  
+ 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
- 
