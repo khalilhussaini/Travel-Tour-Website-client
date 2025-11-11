@@ -1,159 +1,48 @@
-/* ===== HEADER BASE ===== */
-header {
-  background-color: #48bfe3;
-  padding: 15px 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* Header.css */
 
+header {
+  background-color: #55c7e4;
+  padding: 15px 20px;
+  position: relative;
+  z-index: 1000;
 }
 
-/* ===== FLEX LAYOUT ===== */
 .part {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-left: 60px;
 }
 
-/* ===== LOGO SECTION ===== */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #000;
-  transition: transform 0.3s ease;
-
-}
-
-.logo:hover {
-  transform: scale(1.05);
-}
-
-.logo img {
-  height: 60px;
 }
 
 .plane-icon {
-  color: #023e8a;
-  font-size: 28px;
+  color: #055ffa;
+  font-size: 2rem;
 }
 
-.title {
-  font-size: 26px;
-  font-weight: 700;
-  color: #0b090a;
-  letter-spacing: 1px;
+.title h2 {
+  margin-left: 10px;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
 }
 
-/* ===== NAVIGATION ===== */
-.containerbarr ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  transition: all 0.3s ease;
-}
-
-.containerbarr li {
-  margin: 0;
-}
-
-.containerbarr a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #1d3557;
-  transition: color 0.3s ease, transform 0.2s ease;
-  font-size: 17px;
-
-}
-
-.containerbarr a:hover {
-  color: #0077b6;
-  transform: translateY(-2px);
-}
-
-.nav-link.active,
-.containerbarr a.active {
-  color: #03045e;
-  border-bottom: 2px solid #03045e;
-
-}
-
-/* ===== RESPONSIVE MENU (MOBILE) ===== */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  width: 30px;
-  height: 25px;
-}
-
-.nav-toggle span {
-  height: 3px;
-  background: #023e8a;
-  border-radius: 2px;
-  margin: 3px 0;
-  transition: all 0.3s ease;
-}
-
-/* ===== RESPONSIVE BEHAVIOR ===== */
-@media (max-width: 992px) {
-  header {
-    padding: 15px 25px;
+@media (max-width: 768px) {
+  .logo {
+    margin-bottom: 10px;
   }
 
-  .containerbarr ul {
-    flex-direction: column;
-    background: #e0f7fa;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    padding: 20px 0;
-    gap: 20px;
-    display: none;
-    border-top: 2px solid #0077b6;
-  }
-
-  .containerbarr ul.show {
-    display: flex;
-  }
-
-  .nav-toggle {
-    display: flex;
-  }
-
-  .plane-icon {
-    font-size: 24px;
-  }
-
-  .title {
-    font-size: 22px;
-  }
-}
-
-/* ===== SMALL SCREEN TWEAKS ===== */
-@media (max-width: 576px) {
-  header {
-    padding: 10px 15px;
-  }
-
-  .title {
+  .title h2 {
     font-size: 20px;
   }
+}
 
-  .plane-icon {
-    font-size: 22px;
-  }
-
-  .containerbarr ul {
-    gap: 15px;
+@media (max-width: 576px) {
+  .title h2 {
+    font-size: 18px;
   }
 }

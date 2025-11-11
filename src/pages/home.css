@@ -1,144 +1,57 @@
-/* ==========================
-   CARD GRID & ANIMATIONS
-   ========================== */
-.cardDiv {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin: 50px 20px;
-  perspective: 1000px;
-}
+/* Home.css */
 
-/* CARD BASE STYLE */
-.cardDiv .card {
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
-  transform-style: preserve-3d;
-  position: relative;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-/* STAGGERED ENTRY ANIMATION */
-.cardDiv .card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.cardDiv .card:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.cardDiv .card:nth-child(3) {
-  animation-delay: 0.5s;
-}
-
-.cardDiv .card:nth-child(4) {
-  animation-delay: 0.7s;
-}
-
-/* IMAGE EFFECT */
-.cardDiv .card img {
-  width: 100%;
-  height: auto;
-  border-bottom: 2px solid #eee;
-  transition: transform 0.5s ease;
-}
-
-/* CONTENT AREA */
-.cardDiv .card h3 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #222;
-  margin: 20px 20px 10px;
-}
-
-.cardDiv .card p {
-  color: #555;
-  font-size: 15px;
-  line-height: 1.6;
-  margin: 0 20px 20px;
-}
-
-/* BUTTON STYLE */
-.cardDiv .card a {
-  display: inline-block;
-  margin: 0 20px 20px;
-  background: linear-gradient(135deg, #0077b6, #00b4d8);
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 25px;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-
-.cardDiv .card a:hover {
-  background: linear-gradient(135deg, #00b4d8, #48cae4);
-  transform: translateY(-3px);
-}
-
-/* HOVER EFFECT: Lift + Glow + Image Zoom */
-.cardDiv .card:hover {
-  transform: translateY(-12px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-.cardDiv .card:hover img {
-  transform: scale(1.08) rotate(1deg);
-}
-
-.cardDiv .card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), transparent 70%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.cardDiv .card:hover::before {
-  opacity: 1;
-}
-
-.d-flex {
+.homeContent {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #680000;
   color: white;
 }
 
-.d-block:hover {
-  transform: matrix(-9);
+.homeContent h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-/* ==========================
-   KEYFRAME ANIMATIONS
-   ========================== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.homeContent p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
-/* ==========================
-   RESPONSIVE
-   ========================== */
+.cardDiv {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cardDiv .card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.cardDiv .card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.custom-large-text {
+  font-size: 50px;
+  font-weight: bold;
+  color: #39040d;
+}
+
 @media (max-width: 768px) {
-  .cardDiv {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+  .custom-large-text {
+    font-size: 36px;
   }
 }
 
 @media (max-width: 576px) {
-  .cardDiv {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin: 30px 10px;
+  .custom-large-text {
+    font-size: 28px;
   }
 }

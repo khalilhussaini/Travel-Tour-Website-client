@@ -1,212 +1,48 @@
-/* ===== Root Variables for Consistency ===== */
-:root {
-  --primary-color: #ff6a00;
-  --secondary-color: #bf9898;
-  --light-bg: #f9f9f9;
-  --dark-text: #333;
-  --muted-text: #555;
-  --border-radius: 10px;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+/* Contact.css */
 
-/* ===== Contact Section Container ===== */
 .contact-wrap {
-  background: var(--secondary-color);
-  border-radius: var(--border-radius);
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 50px;
-  box-shadow: var(--shadow);
-  color: var(--dark-text);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: flex-start;
-  transition: all 0.3s ease;
+  background: #bf9898;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
-.contact-wrap:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* ===== Contact Heading ===== */
 .contact-wrap h3 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* ===== Form Styles ===== */
-.form-group {
-  margin-bottom: 1.25rem;
-}
-
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--dark-text);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .form-control {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 6px;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: #fff;
-  font-size: 0.95rem;
-  color: var(--dark-text);
-  transition: all 0.3s ease-in-out;
+  padding: 10px;
 }
 
-.form-control:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 5px rgba(255, 106, 0, 0.4);
-  outline: none;
-}
-
-textarea.form-control {
-  resize: vertical;
-  min-height: 120px;
-}
-
-/* ===== Submit Button ===== */
 button[type="submit"] {
-  padding: 12px 35px;
-  background-color: var(--primary-color);
+  padding: 10px 30px;
+  background-color: #ff6a00;
+  color: white;
   border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: 600;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  transition: transform 0.3s, background 0.3s;
 }
 
 button[type="submit"]:hover {
-  background-color: #e05c00;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(255, 106, 0, 0.3);
-}
-
-/* ===== Map Section ===== */
-#map {
-  height: 350px;
-  width: 100%;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  margin-top: 20px;
-}
-
-.mapp {
-  flex: 1;
-  min-width: 350px;
-}
-
-/* ===== Contact Info Cards ===== */
-.dbox {
-  background: var(--light-bg);
-  border-radius: var(--border-radius);
-  padding: 25px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease-in-out;
-}
-
-.dbox:hover {
-  transform: translateY(-5px);
-}
-
-.icon {
-  font-size: 2rem;
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-.text {
-  font-size: 0.95rem;
-  color: var(--muted-text);
-}
-
-.text span {
-  color: var(--dark-text);
-  font-weight: 600;
-}
-
-.text a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.text a:hover {
-  color: #e05c00;
-}
-
-/* ===== Banner Heading (Hero Image Section) ===== */
-.content-wrapper {
-  width: 100%;
-  position: relative;
-  margin-bottom: 2%;
-  overflow: hidden;
-}
-
-.content-wrapper img {
-  width: 100%;
-  height: auto;
-  max-height: 800px;
-  object-fit: cover;
-  filter: brightness(80%);
-  transition: transform 0.6s ease-in-out;
-}
-
-.content-wrapper:is(:hover, :focus) img {
+  background-color: #e65c00;
   transform: scale(1.05);
 }
 
-.heading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 15px 30px;
-  border-radius: 8px;
-}
-
-/* ===== Responsive Design ===== */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .contact-wrap {
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 25px;
-  }
-
-  .mapp {
-    margin: 20px 0 0;
-    width: 100%;
+    padding: 20px;
   }
 }
 
-@media (max-width: 767px) {
-  .contact-wrap h3 {
-    font-size: 1.5rem;
-  }
-
-  .heading {
-    font-size: 2rem;
-  }
-
-  .dbox {
-    padding: 20px;
+@media (max-width: 576px) {
+  .contact-wrap {
+    padding: 10px;
   }
 }
