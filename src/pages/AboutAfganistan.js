@@ -8,7 +8,7 @@ const AboutAfganistan = () => {
       <div className="content-wrpp">
         <div className="image-container">
           <img src="https://i.redd.it/vwz7ia5msvp71.jpg" alt="Travel" />
-          <h2 className="heading">About Afghanistan </h2>
+          {/* <h2 className="heading">About Afghanistan </h2> */}
         </div>
       </div>
 

@@ -1,46 +1,104 @@
-.booking-form-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* ===== Global Styles ===== */
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0069d9;
+  --secondary-color: #00bfa6;
+  --background-light: #f9f9fb;
+  --text-dark: #333;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
+/* ===== Booking Form Container ===== */
+.booking-form-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: var(--background-light);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Form Title ===== */
 .booking-form-title {
   text-align: center;
-  margin-bottom: 30px;
-  align-items: center;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 1px;
 }
 
+/* ===== Form Groups ===== */
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95rem;
 }
 
 .form-input {
   width: 100%;
-  padding: 8px;
-  border-radius: 5px;
+  padding: 10px 12px;
+  border-radius: 6px;
   border: 1px solid #ccc;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background-color: #fff;
+  transition: all 0.3s ease;
 }
 
+.form-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+  outline: none;
+}
+
+/* ===== Submit Button ===== */
 .btn-book {
   display: block;
   width: 100%;
-  padding: 10px;
-  background-color: #007bff;
+  padding: 12px;
+  background-color: var(--primary-color);
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .btn-book:hover {
-  background-color: #0069d9;
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 576px) {
+  .booking-form-container {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  .booking-form-title {
+    font-size: 1.4rem;
+  }
+
+  .btn-book {
+    font-size: 0.95rem;
+  }
 }

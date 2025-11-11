@@ -1,4 +1,3 @@
-// App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./pages/Header";
@@ -8,26 +7,25 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import BookingForm from "./pages/BookingForm";
 import AboutAfganistan from "./pages/AboutAfganistan";
+import Tours from "./pages/Tours";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Outlet } from "react-router-dom";
 import { UserContextProvider } from "./contexts/UserContext";
-import Tours from "./pages/Tours";
+import "./App.css";  
 
 const App = () => {
   return (
     <Router>
       <Header />
-      <Routes>
+      <Routes class  >
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/AboutAfganistan" element={<AboutAfganistan />} />
-        <Route path="/Tours" element={<Tours />} />
         <Route path="/Tours" element={<Tours />}>
           <Route path="BookingForm" element={<BookingForm />} />
         </Route>
       </Routes>
-
       <Footer />
       <UserContextProvider>
         <Outlet />

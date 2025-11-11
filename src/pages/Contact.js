@@ -61,7 +61,7 @@ const Contact = () => {
       <div className="content-wrapper">
         <div className="image-container">
           <img src="https://i.redd.it/vwz7ia5msvp71.jpg" alt="Travel" />
-          <h2 className="heading">Contact with Us</h2>
+          {/* <h2 className="heading">Contact with Us</h2> */}
         </div>
       </div>
       <Container>

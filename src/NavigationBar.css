@@ -1,0 +1,90 @@
+/* NavigationBar.css */
+
+/* Main Navbar Styling */
+
+
+/* Navbar brand & logo */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff !important;
+}
+
+/* Nav links */
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-right: 20px;
+  transition: color 0.3s, transform 0.3s;
+  margin-left: 120px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffdd00 !important;
+  /* Highlight color */
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Protected links */
+.nav-link.protected {
+  color: #ffe066 !important;
+  font-weight: 600;
+}
+
+/* Auth buttons */
+button {
+  margin-left: 10px;
+  padding: 6px 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Toggle button for mobile */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+/* Collapse container spacing */
+.navbar-collapse {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-link {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-link {
+    margin-right: 8px;
+    font-size: 13px;
+  }
+}

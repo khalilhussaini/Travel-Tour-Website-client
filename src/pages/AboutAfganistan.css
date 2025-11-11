@@ -1,108 +1,138 @@
+/* ===== Global Utility Classes ===== */
+:root {
+  --primary-color: #cc3737;
+  --hover-color: #a12b2b;
+  --light-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
 
- .bg-white {
-    justify-content: center
-  }
-  
-  .rounded {
-    border-radius: 0.25rem;
-    justify-content: center
-  }
-  
-  .shadow-sm {
-    box-shadow: 0 0.125rem 0.25rem rgba(134, 18, 18, 0.075) !important;
-  }
-  .content-wrpp:is(:hover, :focus) img { transform: scale(1.1); } 
-  .py-44{
+.bg-white {
+  background-color: var(--light-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    padding-bottom: 11rem !important;
-    text-align: center;
-    font-size: small;
-    justify-content: center
- ;
+.rounded {
+  border-radius: 0.25rem;
+}
 
-  }
-  
-  .px-4 {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    justify-content: center;
+.shadow-sm {
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: all 0.3s ease-in-out;
+}
 
+.shadow-sm:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== Content Wrapper Section ===== */
+.content-wrpp {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content-wrpp img {
+  width: 100%;
+  height: auto;
+  max-height: 800px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.content-wrpp:is(:hover, :focus) img {
+  transform: scale(1.08);
+  filter: brightness(90%);
+}
+
+/* ===== Padding Utilities ===== */
+.py-8 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  text-align: center;
+}
+
+.py-23 {
+  padding-top: 5.75rem !important;
+  padding-bottom: 5.75rem !important;
+  text-align: center;
+}
+
+.py-44 {
+  padding-top: 11rem !important;
+  padding-bottom: 11rem !important;
+  text-align: center;
+}
+
+.px-4 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.px-5 {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.px-5:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 576px) {
+  .py-44 {
+    padding-top: 4rem !important;
+    padding-bottom: 5rem !important;
   }
 
   .py-23 {
- 
-    padding-bottom: 5.75rem !important;
-    justify-content: center
-  }
-  
-  .py-8 {
-
-    padding-bottom: 2rem !important;
-    justify-content: center
-  }
-  .px-5{
-    background-color: rgb(204, 55, 55);
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
   }
 
-  @media (max-width: 576px) {
-    .py-44 {
-      padding-bottom: 5rem !important;
-    }
-    
-    .py-23 {
-      padding-top: 3.25rem !important;
-      padding-bottom: 3.25rem !important;
-    }
-  }
-  
-  @media (min-width: 576px) and (max-width: 768px) {
-    .py-44 {
- 
-      padding-bottom: 7rem !important;
-    }
-    
-    .py-23 {
-
-      padding-bottom: 4rem !important;
-    }
-  }
-  
-  @media (min-width: 768px) and (max-width: 992px) {
-    .py-44 {
- 
-      padding-bottom: 9rem !important;
-    }
-    
-    .py-23 {
-
-      padding-bottom: 5.5rem !important;
-
-    }
-  }
-  
-  @media (min-width: 992px) and (max-width: 1200px) {
-    .py-44 {
-
-      padding-bottom: 10rem !important;
-    }
-    
-    .py-23 {
-
-      padding-bottom: 6rem !important;
-    }
-  }
-  
-
-  .content-wrpp {
-    width: 100%;
-    position: relative;
-   
-  }
-  
   .content-wrpp img {
-    width: 100%;
-    height: auto;
-    max-height: 800px;
-    padding-top: 0%;
+    max-height: 500px;
   }
-  
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .py-44 {
+    padding-top: 5rem !important;
+    padding-bottom: 7rem !important;
+  }
+
+  .py-23 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .py-44 {
+    padding-top: 7rem !important;
+    padding-bottom: 9rem !important;
+  }
+
+  .py-23 {
+    padding-top: 4.5rem !important;
+    padding-bottom: 5.5rem !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .py-44 {
+    padding-top: 8rem !important;
+    padding-bottom: 10rem !important;
+  }
+
+  .py-23 {
+    padding-top: 5rem !important;
+    padding-bottom: 6rem !important;
+  }
+}

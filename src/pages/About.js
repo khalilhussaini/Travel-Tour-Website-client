@@ -12,7 +12,7 @@ function About() {
               src="https://pbs.twimg.com/media/FXbFHAlWYAAcRIi.jpg:large"
               alt="Travel"
             />
-            <h2 className="heading">About Us</h2>
+            {/* <h2 className="heading">About Us</h2> */}
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@ function About() {
                 <Col lg={12}>
                   <Card>
                     <Card.Img
-                      src="https://www.afghanembassy.us/wp-content/uploads/2022/05/afghanistan-featured.jpg"
+                      src="https://againstthecompass.com/wp-content/uploads/2021/08/DSC_74291-1024x684.avif"
                       alt="Card image cap"
                     />
                   </Card>
