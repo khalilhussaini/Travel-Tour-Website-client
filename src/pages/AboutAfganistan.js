@@ -14,7 +14,8 @@ const AboutAfganistan = () => {
 
       <div className="col-xl-12 col-sm-6 mb-23 d-flex align-items-center justify-content-center">
         <div className="bg-white rounded shadow-sm py-44 px-4 justify-content-center">
-          <Card style={{ width: "80rem", height: "40rem" }}>
+          <Card style={{ width: "80rem", height: "auto" }}>
+
             <Card.Img
               variant="top"
               src="https://i.pinimg.com/originals/7a/2e/c7/7a2ec7008f206fa24cec375a03d39db4.jpg"

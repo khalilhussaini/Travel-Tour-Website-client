@@ -1,81 +1,241 @@
-/* Footer.css */
+/* ==========================
+   Modern Footer Styles
+   ========================== */
 
 .footer {
-  background-color: #12335d;
-  color: white;
-  padding: 50px 20px;
-  border-radius: 30px 30px 0 0;
+  position: relative;
+  background: linear-gradient(135deg, #12175d, #2c9cd8);
+  color: #ffffff;
+  border-radius: 50px 50px 0 0;
+  padding: 80px 20px 40px 20px;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.footer .footerCard {
+/* Decorative wave at the top */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 C150,100 350,0 600,50 C850,100 1050,0 1200,50 L1200,0 L0,0 Z" fill="%23ffffff"/></svg>') no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+/* Footer Card Container */
+.footerCard {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #a6b7ec;
-  padding: 20px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
-
-.footer .footerCard .contactDiv {
-  display: flex;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 30px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(10px);
   flex-wrap: wrap;
-  background-color: #2c9cd8;
-  padding: 20px;
-  border-radius: 10px;
   gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.footer .footerCard .contactDiv .text {
+/* Contact Section */
+.contactDiv {
+  display: flex;
   flex: 1;
-  color: white;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.footer .footerCard .contactDiv .inputDiv {
+.contactDiv:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contactDiv .text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contactDiv .text h1 {
+  font-size: 26px;
+  color: #ffdd00;
+  margin-bottom: 15px;
+}
+
+.contactDiv .text p {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.contactDiv .inputDiv {
   flex: 1;
   display: flex;
   gap: 10px;
+  min-width: 250px;
 }
 
-.footer .footerCard .contactDiv input {
+.contactDiv .inputDiv input {
   flex: 1;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 12px 15px;
+  border-radius: 10px;
   border: none;
+  font-size: 14px;
 }
 
-.footer .footerCard .contactDiv button {
-  padding: 10px 20px;
-  background-color: #ffdd00;
+.contactDiv .inputDiv button {
+  padding: 12px 25px;
+  background: #ffdd00;
+  color: #12175d;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 10px;
   font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.footerLinks {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
+.contactDiv .inputDiv button:hover {
+  background: #f0c800;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Introduction & Logo */
+.footerIntro {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.logoDiv a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 28px;
+  color: #ffdd00;
+  transition: transform 0.3s ease;
+}
+
+.logoDiv a:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Paragraph */
+.footerParagraph {
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 500px;
+  color: #ffffffcc;
+}
+
+/* Social Icons */
+.footerSocials {
   margin-top: 20px;
 }
 
-.footerLinks a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.footerSocials .icon {
+  font-size: 24px;
+  margin-right: 12px;
+  color: #ffdd00;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.footerLinks a:hover {
-  color: #ff6a00;
+.footerSocials .icon:hover {
+  color: #ffffff;
+  transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
-  .footer .footerCard {
+/* Footer Links */
+.footerLinks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.groupTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffdd00;
+}
+
+.footerList {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffffcc;
+}
+
+/* Footer Bottom */
+.footerDiv {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffffaa;
+}
+
+/* ==========================
+   Image & Button Animations
+   ========================== */
+.contactDiv img {
+  transition: transform 0.3s ease;
+}
+
+.contactDiv:hover img,
+.contactDiv:focus img {
+  transform: scale(1.05);
+}
+
+/* ==========================
+   Responsive Design
+   ========================== */
+@media (max-width: 992px) {
+  .footerCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .contactDiv {
     flex-direction: column;
   }
 
+  .contactDiv .text,
+  .contactDiv .inputDiv {
+    width: 100%;
+  }
+
+  .footerLinks {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
   .footerLinks {
     grid-template-columns: 1fr;
+  }
+
+  .contactDiv .inputDiv {
+    flex-direction: column;
+  }
+
+  .contactDiv .inputDiv input,
+  .contactDiv .inputDiv button {
+    width: 100%;
   }
 }

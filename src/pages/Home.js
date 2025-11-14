@@ -24,9 +24,9 @@ function Home() {
             <h1 className="custom-caption-title custom-large-text">
               Search your Holiday
             </h1>
-            <p className="custom-caption-text custom-large-tex ">
+            {/* <p className="custom-caption-text custom-large-tex ">
               Travel writing is all about your personal experiences
-            </p>
+            </p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -55,12 +55,12 @@ function Home() {
             height="1000px"
           />
           <Carousel.Caption className="custom-caption">
-            <h1 className="custom-caption-title custom-large-text">
+            {/* <h1 className="custom-caption-title custom-large-text">
               Discover Your Favorite place with{" "}
             </h1>
             <p className="custom-caption-text custom-large-text">
               Travel writing is all about your personal experiences
-            </p>
+            </p> */}
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

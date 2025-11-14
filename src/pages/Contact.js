@@ -60,13 +60,13 @@ const Contact = () => {
     <section className="ftco-section">
       <div className="content-wrapper">
         <div className="image-container">
-          <img src="https://i.redd.it/vwz7ia5msvp71.jpg" alt="Travel" />
+          <img src="https://www.atravel.blog/content/images/travel/travel-to-afghanistan.webp" alt="Travel" />
           {/* <h2 className="heading">Contact with Us</h2> */}
         </div>
       </div>
       <Container>
         <Row className="justify-content-center"></Row>
-        <h1>Contact with Us</h1>
+        <h1 className="part11">Contact with Us</h1>
         <br />
         <Row className="justify-content-center">
           <Col md={7}>

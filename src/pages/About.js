@@ -24,7 +24,7 @@ function About() {
                 <Col sm={7}>
                   <Card>
                     <Card.Img
-                      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/89/46/41/live-is-great.jpg?w=500&h=300&s=1"
+                      src="https://www.intriqjourney.com/wp-content/uploads/2025/08/Buddhas-of-Bamiyan-Bamyan-Cover-Afghanistan.jpg"
                       alt="Card image cap"
                       width="100%"
                     />
@@ -140,7 +140,7 @@ function About() {
             </div>
             <Col xs={12} sm={4} className="person-wrapper">
               <img
-                src="https://cdn.thetealmango.com/wp-content/uploads/2021/08/Robert.jpg"
+                src="https://media.cnn.com/api/v1/images/stellar/prod/230721114552-kevin-mitnick-file.jpg?c=original"
                 circle
                 className="profile-pic"
                 alt="Profile"
@@ -154,7 +154,7 @@ function About() {
             </Col>
             <Col xs={12} sm={4} className="person-wrapper">
               <img
-                src="https://imgix.ranker.com/list_img_v2/1960/2741960/original/famous-leo-male-celebrities?w=817&h=427&fm=jpg&q=50&fit=crop"
+                src="https://pyxis.nymag.com/v1/imgs/ff2/8a4/f06f4277e27f5bf13ef24154495c5744ab-05-hacker-feature-lede.2x.h600.w512.jpg"
                 circle
                 className="profile-pic"
                 alt="Profile"
@@ -168,7 +168,7 @@ function About() {
             </Col>
             <Col xs={12} sm={4} className="person-wrapper">
               <img
-                src="https://mochamanstyle.com/wp-content/uploads/2014/11/steve_harvey.jpg"
+                src="https://www.aljazeera.com/wp-content/uploads/2015/09/25dded4c8ba348a8a874e8ccc2992a38_18.jpeg?resize=1200%2C675"
                 circle
                 className="profile-pic"
                 alt="Profile"
@@ -198,7 +198,7 @@ function About() {
             <div className="col-xl-3 col-sm-6 mb-5">
               <div className="bg-white rounded shadow-sm py-13 px-4">
                 <img
-                  src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTokxtRCzACw7EvgP806qVwODoZihOQSI-CsA&s"
                   alt=""
                   width="100"
                   className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"

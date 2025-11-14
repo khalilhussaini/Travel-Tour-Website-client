@@ -38,6 +38,14 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.world {
+  text-align: center;
+}
+
+.d-flex {
+  color: white;
+}
+
 .custom-large-text {
   font-size: 50px;
   font-weight: bold;
